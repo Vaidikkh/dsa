@@ -24,8 +24,8 @@ int main(){
         cin>>arr[i];
     }
 
-    check_sorted(arr);
-    
+    bool sorted = check_sorted(arr);
+    cout<<"Array is Sorted :"<<sorted<<endl;
     return 0;
 
 }
