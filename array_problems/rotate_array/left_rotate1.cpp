@@ -27,6 +27,13 @@ void left_shift_d(vector<int> &arr,int n,int d){
     }
 
 }
+void left_shift_d_optimal(vector<int> &arr,int n,int d){
+    d = d % n;
+    if (d == 0) return;
+    reverse(arr.begin(), arr.begin() + d);
+    reverse(arr.begin() + d, arr.begin() + n);
+    reverse(arr.begin(), arr.begin() + n);
+}
 
 
 int main(){
@@ -42,7 +49,8 @@ int main(){
     cin>>d;
 
     //left_shift1(arr,n);
-    left_shift_d(arr,n,d);
+    //left_shift_d(arr,n,d);
+    left_shift_d_optimal(arr,n,d);
     for(int i=0;i<n;i++){
         cout<<arr[i];
     }
